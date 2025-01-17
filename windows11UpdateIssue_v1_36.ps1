@@ -6,7 +6,7 @@
 .PARAMETER <Parameter_Name>
   No parameters Required
 .OUTPUTS
-  Actions log to .\WinUpdateFixLog_[DATE]_.log
+  Actions logged to \WinUpdateFixLog_[DATE]_.log
   DISM log to working folder
 .NOTES
   Version:        1.3.6 
