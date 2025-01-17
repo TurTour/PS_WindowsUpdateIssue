@@ -10,7 +10,7 @@
   DISM log to working folder
 .NOTES
   Version:        1.3.6 
-  Author:         Artur Ferreira - artur.ferreira
+  Author:         Artur Ferreira
   Creation Date:  08.07.2024
   Purpose/Change: Service Desk Task Automation
   Company:        
