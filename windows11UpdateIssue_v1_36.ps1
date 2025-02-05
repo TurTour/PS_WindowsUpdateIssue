@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  To fix PC not getting Win Update coming from Intune Dist
+  To fix PC not getting Win Update
 .DESCRIPTION
   Fix Win10/11 Updating issues 
 .PARAMETER <Parameter_Name>
@@ -12,7 +12,7 @@
   Version:        1.3.6 
   Author:         Artur Ferreira
   Creation Date:  08.07.2024
-  Purpose/Change: Service Desk Task Automation
+  Purpose/Change: 
   Company:        
   Contact for more info   
 .EXAMPLE
@@ -242,11 +242,8 @@ try {
     }
     if(Test-Path -Path "C:\Windows\SoftwareDistribution"){ 
         attrib -r -s -h /s /d "C:\Windows\SoftwareDistribution" 
-        
-        ###### Fix #####
         Get-ChildItem -Path "C:\windows" | Where-Object {$_.Name -like "SoftwareDistribution*"} | Remove-Item -Force -Confirm:$false -ErrorAction SilentlyContinue
         Write-Log -Message "Deleted C:\Windows\SoftwareDistribution* - FIXED" -LogFilePath $logPath
-        ################
     }
 }
 catch {
